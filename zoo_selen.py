@@ -1,3 +1,4 @@
+#!python3
 import time
 import csv
 
@@ -13,10 +14,10 @@ URL = f'https://www.zooplus.de/tierarzt/results?animal_99=true'
 
 
 def get_html(url=URL):
-    """Запускає браузер, отримує та повертає необроблені дані"""
-    # Створення списку для збіру необроблених даних
+    """Starts the browser, receives and returns raw data"""
+    # Creating a list to collect raw data
     all_data = []
-    num_page = 3    # Кількість сторінок для парсингу
+    num_page = 3    # Number of pages to parse
     i = 1
     browser = webdriver.Chrome()
     browser.implicitly_wait(10)
@@ -74,7 +75,7 @@ def get_html(url=URL):
 
 
 def save_csv(data):
-    """create and record CSV-file"""
+    """Create and record CSV-file"""
     csv_file = open('output_data.csv', 'w', newline='', encoding='utf-8')
     csv_writer = csv.writer(csv_file)
     csv_writer.writerows(data)
