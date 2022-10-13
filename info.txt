@@ -1,0 +1,4 @@
+!WARNING!
+
+Webbrowser Chrome version 106.0.5249.119
+chromedriver https://chromedriver.storage.googleapis.com/106.0.5249.61/chromedriver_win32.zip
