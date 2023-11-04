@@ -19,7 +19,7 @@ def get_html(url=URL):
     all_data = []
     num_page = 3    # Number of pages to parse
     i = 1
-    browser = webdriver.Chrome()
+    browser = webdriver.Firefox()
     browser.implicitly_wait(10)
     while i <= num_page:
         browser.get(url + '&page=' + str(i))
@@ -68,7 +68,7 @@ def get_html(url=URL):
         i += 1
 
     print('Done!')
-    time.sleep(5)
+    time.sleep(1)
     browser.close()
     browser.quit()
     return all_data
